@@ -43,7 +43,7 @@ first_frequency_repetition :: proc(lines: []string) -> int {
 	}
 }
 
-day_one :: proc() {
+solution :: proc() {
 	data, ok := os.read_entire_file("./i.txt")
 	defer delete(data)
 
@@ -62,5 +62,5 @@ day_one :: proc() {
 }
 
 main :: proc() {
-	util.trace(day_one)
+	util.trace(solution)
 }
