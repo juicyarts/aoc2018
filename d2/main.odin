@@ -10,6 +10,7 @@ count_letters :: proc(input: string) -> (int, int) {
 	cm := []map[rune]int{{}, {}, {}}
 	defer delete_map(cm[0])
 	defer delete_map(cm[1])
+	defer delete_map(cm[2])
 
 	for c in input {
 		cm[2][c] += 1
@@ -21,7 +22,6 @@ count_letters :: proc(input: string) -> (int, int) {
 		}
 	}
 
-	delete_map(cm[2])
 	return len(cm[0]) > 0 ? 1 : 0, len(cm[1]) > 0 ? 1 : 0
 }
 

@@ -8,22 +8,22 @@ import "core:strings"
 import "../util"
 
 calculate_frequency :: proc(lines: []string) -> int {
-	freq := 0
+	f := 0
 	for i := 0; i < len(lines); i += 1 {
 		n, ok := strconv.parse_int(lines[i])
 		if !ok {
 			continue
 		}
 
-		freq += n
+		f += n
 	}
 
-	return freq
+	return f
 }
 
 first_frequency_repetition :: proc(lines: []string) -> int {
-	freq := 0
-	visited := make(map[int]bool)
+	f := 0
+	v := make(map[int]bool)
 
 	for {
 		for i := 0; i < len(lines); i += 1 {
@@ -32,13 +32,13 @@ first_frequency_repetition :: proc(lines: []string) -> int {
 				continue
 			}
 
-			freq += n
-			if freq in visited {
-				delete(visited)
-				return freq
+			f += n
+			if f in v {
+				delete(v)
+				return f
 			}
 
-			visited[freq] = true
+			v[f] = true
 		}
 	}
 }
