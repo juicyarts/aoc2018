@@ -1,0 +1,13 @@
+# - Linux/MacOS
+.DS_Store
+odin
+!odin/
+**/*.dSYM
+*.bin
+demo.bin
+libLLVM*.so*
+
+# bin
+/d*/*
+!**/*.odin
+!**/*.txt
