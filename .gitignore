@@ -10,4 +10,5 @@ libLLVM*.so*
 # bin
 /d*/*
 !**/*.odin
+!**/*.nim
 !**/*.txt
