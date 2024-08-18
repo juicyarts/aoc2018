@@ -19,8 +19,7 @@ def react(o):
 def reduce(o):
     min = len(o)
     for c in abc:
-        norm = re.sub(c, "", o, flags=re.IGNORECASE)
-        res = react(norm)
+        res = react(re.sub(c, "", o, flags=re.IGNORECASE))
         min = res if res < min else min
     return min
 
