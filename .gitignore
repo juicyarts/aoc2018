@@ -11,4 +11,6 @@ libLLVM*.so*
 /d*/*
 !**/*.odin
 !**/*.nim
+!**/*.zig
+!**/*.py
 !**/*.txt
